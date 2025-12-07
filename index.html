@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌱 HortaGPT-AgriSenseV1 - Seu Assistente de Agricultura Inteligente</title>
+    <style>
+        /* Estilos CSS */
+        :root {
+            --cor-primaria: #4CAF50; /* Verde Agrícola */
+            --cor-secundaria: #8BC34A; /* Verde Claro */
+            --cor-fundo: #f4f4f9; /* Fundo Suave */
+            --cor-texto: #333;
+            --sombra-caixa: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            text-align: center;
+        }
+
+        header {
+            background-color: var(--cor-primaria);
+            color: white;
+            padding: 20px 0;
+            box-shadow: var(--sombra-caixa);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Seção de Conteúdo Principal */
+        .intro-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: var(--sombra-caixa);
+        }
+
+        .intro-section h2 {
+            color: var(--cor-primaria);
+            margin-top: 0;
+        }
+
+        .intro-section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Estilo do Botão */
+        .btn-acesso {
+            display: inline-block;
+            background-color: var(--cor-secundaria);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .btn-acesso:hover {
+            background-color: var(--cor-primaria);
+        }
+
+        /* Estilo do Iframe (Incorporação do Modelo) */
+        .iframe-container {
+            border: 2px solid var(--cor-primaria);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            height: 70vh; /* Ocupa 70% da altura da viewport */
+            box-shadow: var(--sombra-caixa);
+        }
+
+        #hortagpt-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Estilo para rodapé */
+        footer {
+            padding: 15px;
+            background-color: var(--cor-texto);
+            color: white;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌱 HortaGPT-AgriSenseV1</h1>
+        <p>Sua inteligência artificial para otimizar hortas e plantações.</p>
+    </header>
+
+    <div class="container">
+
+        <section class="intro-section">
+            <h2>Bem-vindo à Agricultura do Futuro!</h2>
+            <p>
+                O HortaGPT-AgriSenseV1 é um modelo de linguagem avançado, treinado para fornecer conselhos precisos sobre plantio, manejo de pragas, irrigação ideal e nutrição do solo. Use a ferramenta abaixo para interagir e tirar o máximo proveito da sua colheita!
+            </p>
+            <p>
+                ATENÇÃO: Se o chat não carregar abaixo (por restrições de segurança), clique no botão para acessar diretamente.
+            </p>
+            <a id="acesso-direto" href="https://gemini.google.com/gem/23b0e7a54a3f" target="_blank" class="btn-acesso">
+                🚀 Acessar HortaGPT-AgriSenseV1 Diretamente
+            </a>
+        </section>
+
+        <section>
+            <h3>Interaja com o HortaGPT</h3>
+            <div class="iframe-container">
+                <iframe 
+                    id="hortagpt-iframe" 
+                    src="https://gemini.google.com/gem/23b0e7a54a3f" 
+                    title="HortaGPT-AgriSenseV1 Chat"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2025 HortaGPT-AgriSenseV1 Project. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        // JavaScript (Opcional, mas útil para mensagens de erro/log)
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const iframe = document.getElementById('hortagpt-iframe');
+            
+            // Tenta detectar se o iframe está carregando
+            // Note: Não é possível detectar erros de X-Frame-Options/CSP de forma confiável
+            // ou segura usando apenas JavaScript no lado do cliente.
+            
+            iframe.onload = function() {
+                console.log("Iframe carregado (ou pelo menos a tentativa de carregamento iniciou).");
+            };
+            
+            iframe.onerror = function() {
+                console.error("Erro ao tentar carregar o Iframe. Acesso direto recomendado.");
+            };
+            
+            // Exemplo de uma simples função JS (caso queira adicionar funcionalidades futuras)
+            const acessoDiretoBtn = document.getElementById('acesso-direto');
+            acessoDiretoBtn.addEventListener('click', () => {
+                console.log("Usuário clicou no botão de acesso direto.");
+            });
+        });
+    </script>
+
+</body>
+</html>
